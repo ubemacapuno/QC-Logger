@@ -1,9 +1,31 @@
-# Starter React Project for the Supabase Course
+## QC Buddy (Work in Progress)
 
-**How to run the starter project:**
+This is a full-stack project using React and Supabase. It will be a CRUD app for laboratory QC tests.
 
-1. Once downloaded, navigate to the project directory in a terminal and run **npm install** to install all the project dependencies.
-2. In the project directory, run **npm start** to run the app & view it in a browser at [http://localhost:3000](http://localhost:3000).
+ <!-- <tr>
+    <td width="100%"  style="align:center;" valign="top">
+            <img src="https://github.com/ubemacapuno/images-for-github-readme/blob/main/tortoise-tea-house-site.jpg?raw=true" width="100%"  alt="Tortoise Tea House website."/>
+    </td>
+  </tr> -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How It's Made:
+
+**Tech used:** 
+
+React, Supabase, JavaScript/HTML/CSS
+
+Using NPM:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Start Application
+$ npm start
+```
+
+## Lessons Learned:
+TBA
+
+## Optimizations:
+TBA
