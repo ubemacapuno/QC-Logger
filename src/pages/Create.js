@@ -55,7 +55,7 @@ const Create = () => {
           onChange={(e) => setBatch(e.target.value)}
         />
 
-        <label htmlFor="date">EOS Date:</label>
+<label htmlFor="date">End of Synthesis Date:</label>
         <input
           type="date"
           id="date"
@@ -71,7 +71,7 @@ const Create = () => {
           onChange={(e) => setph(e.target.value)}
         />
 
-        <label htmlFor="endotoxin">Endotoxin:</label>
+        <label htmlFor="endotoxin">Endotoxin (EU/mL):</label>
         <input 
           type="number"
           id="endotoxin"
@@ -79,7 +79,7 @@ const Create = () => {
           onChange={(e) => setEndotoxin(e.target.value)}
         />
 
-        <label htmlFor="etOH">Ethanol:</label>
+        <label htmlFor="etOH">Ethanol (mg/mL):</label>
         <input 
           type="number"
           id="etOH"
@@ -87,7 +87,7 @@ const Create = () => {
           onChange={(e) => setetoh(e.target.value)}
         />
 
-        <label htmlFor="aCN">Acetonitrile:</label>
+        <label htmlFor="aCN">Acetonitrile (mg/mL):</label>
         <input 
           type="number"
           id="aCN"

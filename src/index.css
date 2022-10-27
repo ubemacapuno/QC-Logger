@@ -24,9 +24,19 @@ nav a {
   color: #f2f2f2;
   margin: 10px;
   display: inline-block;
+  text-decoration: none;
+  transition: 0.2s;
+}
+nav a:hover {
+  color: var(--secondary);
 }
 nav h1 {
   color: #fff;
+}
+.flex-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .page {
   max-width: 1200px;
@@ -102,7 +112,7 @@ form button {
 }
 /* order-by buttons */
 .order-by button {
-  margin-right: 10px;
+  margin: 10px 5px;
   background: var(--primary);
   color: #fff;
   border: 0;
@@ -110,6 +120,17 @@ form button {
   border-radius: 6px;
   font-family: "Poppins";
   cursor: pointer;
+}
+.logo {
+  font-size: 35px;
+  color: var(--secondary);
+}
+.order-by span {
+  margin: 0 15px;
+}
+.order-by p{
+  font-weight: bold;
+  display: inline;
 }
 .Pass, .Fail{
   position: absolute;
