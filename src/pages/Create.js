@@ -95,29 +95,28 @@ const Create = () => {
           onChange={(e) => setacn(e.target.value)}
         />
 
-        
         <label htmlFor="sterility">Sterility:</label>
         <select 
           name="sterility" 
           id="sterility"
-          value={sterility}
+          defaultValue={sterility}
           onChange={(e) => setSterility(e.target.value)}
         >
-            <option value="" disabled selected>Select Pass or Fail</option>
-            <option value="Fail">Fail</option>
+            <option value="" disabled>Select Pass or Fail</option>
             <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
         </select>
 
         <label htmlFor="kryptofix">Kryptofix:</label>
         <select 
           name="kryptofix" 
           id="kryptofix"
-          value={kryptofix}
+          defaultValue={kryptofix}
           onChange={(e) => setKryptofix(e.target.value)}
         >
-            <option value="" disabled selected>Select Pass or Fail</option>
-            <option value="Fail">Fail</option>
+            <option value="" disabled>Select Pass or Fail</option>
             <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
         </select>
 
      
