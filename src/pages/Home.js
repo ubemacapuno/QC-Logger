@@ -7,6 +7,7 @@ import ReportCard from "../components/ReportCard"
 const Home = () => {
   const [fetchError, setFetchError] = useState(null)
   const [reports, setReports] = useState(null)
+  const [orderBy, setOrderBy] = useState('created_at') //sort using Supabase
 
   //Function for looking through reports and 
   //update them based on if the report was JUST DELETED!
@@ -24,6 +25,7 @@ const Home = () => {
       const { data, error } = await supabase
         .from('reports')
         .select()
+        .order(orderBy, {ascending: true})
 
         if(error){
           setFetchError("Could not find reports in the database!")
@@ -38,14 +40,21 @@ const Home = () => {
 
     fetchReports()
 
-  }, [])
+  }, [orderBy]) //re-fetch happens (useEffect runs again) when orderBy updates
 
   return (
     <div className="page home">
       {fetchError && (<p>{fetchError}</p>)}
       {reports && (
         <div className="smoothies"> 
-        {/* order-by buttons */}
+        <div className="order-by">
+          <p>Order by: </p><span>{orderBy}</span>
+          <div className="buttons">
+            <button onClick={() => setOrderBy('created_at')}>Created</button>
+            <button onClick={() => setOrderBy('batch')}>Batch Name</button>
+            <button onClick={() => setOrderBy('date')}>EOS Date</button>
+          </div>
+        </div>
           <div className="smoothie-grid">
             {reports.map(el => (
               <ReportCard 

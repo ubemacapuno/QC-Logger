@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ReportCard = ({ report, onDelete }) => {
     //Logic for Pass/Fail - FIX LATER
     let qcResult = "Fail"
-    if(report.ph > 5 && report.ph < 7.5 && report.etoh <= 5 && report.acn <=0.4){
+    if(report.ph > 5 && report.ph < 7.5 && report.etoh <= 5 && report.acn <=0.4 && report.sterility === "Pass" && report.kryptofix === "Pass"){
         qcResult = "Pass"
     }
 

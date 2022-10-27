@@ -10,7 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <h1>QC Buddy</h1>
+        <div className="flex-header">
+          <i className="material-icons logo">biotech</i>
+          <h1>QC Buddy</h1>
+        </div>
         <Link to="/">Home</Link>
         <Link to="/create">Enter QC Results</Link>
       </nav>
