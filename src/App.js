@@ -12,7 +12,7 @@ function App() {
       <nav>
         <h1>QC Buddy</h1>
         <Link to="/">Home</Link>
-        <Link to="/create">Enter QC Test</Link>
+        <Link to="/create">Enter QC Results</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />

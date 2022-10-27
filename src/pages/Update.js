@@ -54,6 +54,7 @@ const Update = () => {
         .single() //grab single item in database
 
       if(error){
+        console.log(error)
         navigate('/', { replace: true }) //"replace: true" replaces the route in the history with the homepage
       }
 
@@ -132,7 +133,6 @@ const Update = () => {
           value={sterility}
           onChange={(e) => setSterility(e.target.value)}
         >
-            <option value="" disabled selected>Select Pass or Fail</option>
             <option value="Fail">Fail</option>
             <option value="Pass">Pass</option>
         </select>
@@ -144,7 +144,6 @@ const Update = () => {
           value={kryptofix}
           onChange={(e) => setKryptofix(e.target.value)}
         >
-            <option value="" disabled selected>Select Pass or Fail</option>
             <option value="Fail">Fail</option>
             <option value="Pass">Pass</option>
         </select>

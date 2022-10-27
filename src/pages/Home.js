@@ -1,12 +1,20 @@
 import supabase from "../config/supabaseClient"
 import { useEffect, useState } from 'react'
 
-// components
+// Card component for the reports
 import ReportCard from "../components/ReportCard"
 
 const Home = () => {
   const [fetchError, setFetchError] = useState(null)
   const [reports, setReports] = useState(null)
+
+  //Function for looking through reports and 
+  //update them based on if the report was JUST DELETED!
+  const handleDelete = (id) => {
+    setReports(prevReports => {
+      return prevReports.filter(el => el.id !== id)
+    })
+  }
 
   //useEffect hook to store the data
   //Fires when component renders
@@ -40,7 +48,11 @@ const Home = () => {
         {/* order-by buttons */}
           <div className="smoothie-grid">
             {reports.map(el => (
-              <ReportCard key={el.id} report={el} />
+              <ReportCard 
+                key={el.id} 
+                report={el} 
+                onDelete = {handleDelete}
+              />
             ))}
           </div>
         </div>
