@@ -83,13 +83,13 @@ form {
   margin: 0 auto;
   border-radius: 6px;
 }
-form input, form textarea {
+form input, form textarea, form select {
   display: block;
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  margin: 10px 0 20px 0;
+  margin: 5px 0 30px 0;
 }
 form button {
   background: var(--primary);
@@ -126,10 +126,10 @@ form button {
 }
 .Fail{
   color: #fff;
-  background: coral;
+  background: rgb(220, 91, 91);
 }
 .Pass{
-  color: limegreen;
+  background: limegreen;
 }
 .order-by-value {
   font-weight: bold;
