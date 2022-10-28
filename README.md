@@ -23,7 +23,7 @@ $ npm start
 ```
 
 ## Things to add:
-- Create a `.env` file in the root directory and add the following as `key: value` :
+- Create a `.env` file in the root directory and add the following:
   - REACT_APP_SUPABASE_URL=[Enter Supabase URL Here]
   - REACT_APP_ANON_KEY=[Enter Supabase Key Here]
 
