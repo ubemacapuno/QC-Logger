@@ -1,7 +1,5 @@
-## QC Buddy (Work in Progress)
-
-This is a full-stack project using React and Supabase. It will be a CRUD app for laboratory QC tests.
-
+## QC Logger (Work in Progress)
+Record your QC laboratory results using QC Logger! This app is inspired by my prior experience as a laboratory professional, where I would routinely record QC test results on paper. Why not make it electronic?! This full-stack project is made with React and Supabase.
  <!-- <tr>
     <td width="100%"  style="align:center;" valign="top">
             <img src="https://github.com/ubemacapuno/images-for-github-readme/blob/main/tortoise-tea-house-site.jpg?raw=true" width="100%"  alt="Tortoise Tea House website."/>
@@ -25,7 +23,7 @@ $ npm start
 ```
 
 ## Lessons Learned:
-TBA
+Better knowledge of React hooks, such as useEffect and useState. Better knowledge of using Supabase API calls to connect to the Supabase backend.
 
 ## Optimizations:
-TBA
+I would like to eventually build out authentication, RLS, and an audit trail feature.
