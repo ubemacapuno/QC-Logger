@@ -23,19 +23,19 @@ export default function Auth() {
   return (
     <div className="row flex-center flex">
       <div className="col-6 form-widget" aria-live="polite">
-        <p className="description">
+        <h1 className="description">
           Sign in to QC Buddy!
-        </p>
+        </h1>
         {loading ? (
           'Sending magic link...'
         ) : (
-          <form onSubmit={handleLogin}>
-            <label htmlFor="email">Email</label>
+          <form className="login-form" onSubmit={handleLogin}>
+            <label htmlFor="email">Your Email</label>
             <input
               id="email"
               className="inputField"
               type="email"
-              placeholder="Your email"
+              placeholder="example@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

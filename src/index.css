@@ -38,6 +38,14 @@ nav h1 {
   align-items: center;
   justify-content: center;
 }
+.description{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.login-form{
+  margin: 0 10px;
+}
 .page {
   max-width: 1200px;
   margin: 20px auto;
