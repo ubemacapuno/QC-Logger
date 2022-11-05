@@ -1,5 +1,5 @@
 ## QC Logger
-Please be advised that this project is a work in progress, so the <a target="_blank" href="https://qc-buddy.netlify.app/">DEMO</a> may become disconnected from the API during feature updates!!
+Please be advised that the <a target="_blank" href="https://qc-buddy.netlify.app/">DEMO</a> may become disconnected from the API during feature updates!
 
 
 Record your QC laboratory results using QC Logger! This app was inspired by my prior experience as a laboratory professional, where I would routinely record QC test results on paper. Why not make it electronic?! This full-stack project is made with React and Supabase.
