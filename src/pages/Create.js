@@ -55,7 +55,7 @@ const Create = () => {
           onChange={(e) => setBatch(e.target.value)}
         />
 
-<label htmlFor="date">End of Synthesis Date:</label>
+        <label htmlFor="date">End of Synthesis Date:</label>
         <input
           type="date"
           id="date"

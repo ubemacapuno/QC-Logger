@@ -21,11 +21,12 @@ export default function Auth() {
   }
 
   return (
-    <div className="row flex-center flex">
+    <div className="flex-wrapper">
       <div className="col-6 form-widget flex-container" aria-live="polite">
         <h1 className="description">
-          Sign in to QC Buddy!
+          Sign in to QC Logger!
         </h1>
+        <i className="material-icons logo logo-auth">biotech</i>
         {loading ? (
           'Sending magic link...'
         ) : (
@@ -43,6 +44,7 @@ export default function Auth() {
             Send magic link
           </button>
         </form>
+        
         )}
       </div>
     </div>
