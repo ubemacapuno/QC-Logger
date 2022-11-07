@@ -70,13 +70,13 @@ const Account = ({ session }) => {
       {loading ? (
         'Saving ...'
       ) : (
-        <>
+        <p className="greeting">
           <div>Hello, {session.user.email}!</div>
-        </>
+        </p>
       )}
       <button
         type="button"
-        className="button block"
+        className="button block signout"
         onClick={() => supabase.auth.signOut()}
       >
         Sign Out

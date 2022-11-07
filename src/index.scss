@@ -4,6 +4,8 @@
 :root {
   --primary: #12bca2;
   --secondary: #6d15df;
+  --tertiary: coral;
+  --white: #fff;
 }
 h1,h2,h3 {
   margin: 0;
@@ -19,30 +21,49 @@ nav {
   background: var(--primary);
   padding: 10px 20px;
   text-align: center;
+
+  a {
+    color: #f2f2f2;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: var(--secondary);
+  }
+
+  h1 {
+    color: var(--white);
+  }
 }
-nav a {
-  color: #f2f2f2;
-  margin: 10px;
-  display: inline-block;
-  text-decoration: none;
-  transition: 0.2s;
+
+// auth elements
+.greeting {
+    color: black;
 }
-nav a:hover {
-  color: var(--secondary);
+
+.signout {
+    background-color: var(--secondary);
+    color: var(--white);
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-family: "Poppins";
+    cursor: pointer;
 }
-nav h1 {
-  color: #fff;
-}
+
 .flex-header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .flex-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .description{
   text-align: center;
@@ -56,8 +77,13 @@ nav h1 {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-}
 
+  label{
+    font-weight: bold;
+  }
+
+}
+ 
 /* smoothie grid */
 .smoothie-grid {
   margin-top: 40px;
@@ -65,6 +91,7 @@ nav h1 {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
+
 .smoothie-card {
   width: 100%;
   padding: 10px;
@@ -72,32 +99,36 @@ nav h1 {
   box-sizing: border-box;
   border-radius: 6px;
   position: relative;
+
+  .rating {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--secondary);
+    color: #fff;
+    border-radius: 6px;
+    width: 40px;
+    height: 0;
+    padding: 20px 0;
+    line-height: 0px;
+    text-align: center;
+  }
+
+  .buttons {
+    text-align: right;
+  }
+
+  i {
+    color: #bbb;
+    margin-left: 10px;
+    font-size: 1.2em;
+    padding: 6px;
+    background: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
-.smoothie-card .rating {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: var(--secondary);
-  color: #fff;
-  border-radius: 6px;
-  width: 40px;
-  height: 0;
-  padding: 20px 0;
-  line-height: 0px;
-  text-align: center;
-}
-.smoothie-card .buttons {
-  text-align: right;
-}
-.smoothie-card i {
-  color: #bbb;
-  margin-left: 10px;
-  font-size: 1.2em;
-  padding: 6px;
-  background: #eee;
-  border-radius: 50%;
-  cursor: pointer;
-}
+
 
 /* forms */
 form {
@@ -107,24 +138,28 @@ form {
   max-width: 480px;
   margin: 0 auto;
   border-radius: 6px;
-}
-form input, form textarea, form select {
-  display: block;
-  width: 100%;
-  padding: 6px;
-  box-sizing: border-box;
   border: 1px solid #ccc;
-  margin: 5px 0 30px 0;
+
+  button {
+    background: var(--primary);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-family: "Poppins";
+    cursor: pointer;
+  }
+
+  input, textarea, select {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    margin: 5px 0 30px 0;
+  }
 }
-form button {
-  background: var(--primary);
-  color: #fff;
-  border: 0;
-  border-radius: 6px;
-  padding: 6px 8px;
-  font-family: "Poppins";
-  cursor: pointer;
-}
+
+
 /* order-by buttons */
 .order-by button {
   margin: 10px 5px;
@@ -135,14 +170,27 @@ form button {
   border-radius: 6px;
   font-family: "Poppins";
   cursor: pointer;
+
+  span {
+    margin: 0 15px;
+  }
 }
 .logo {
   font-size: 35px;
   color: var(--secondary);
 }
-.order-by span {
-  margin: 0 15px;
+.logo-auth {
+  margin: 0 0 1rem 0;
+  font-size: 70px;
+  
 }
+.flex-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .order-by p{
   font-weight: bold;
   display: inline;

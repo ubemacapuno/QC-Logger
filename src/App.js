@@ -36,7 +36,7 @@ export default function App() {
                 <h1>QC Logger</h1>
               </div>
               <Link to="/">Home</Link>
-              <Link to="/create">Enter QC Results</Link>
+              <Link to="/create">FDG Report</Link>
               <Account key={session.user.id} session={session} />
             </nav>
             <Routes>
