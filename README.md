@@ -31,7 +31,7 @@ $ npm start
   - REACT_APP_ANON_KEY=[Enter Supabase Key Here]
 
 ## Lessons Learned:
-Better knowledge of React hooks, such as useEffect and useState. Better knowledge of using Supabase API calls to connect to the Supabase backend.
+Better knowledge of React hooks, such as useEffect and useState. Better knowledge of using Supabase API calls to connect to the Supabase backend. Adding authentication via Supabase.
 
 ## Optimizations:
-I would like to eventually build out authentication, RLS, and an audit trail feature.
+I would like to eventually build out RLS, and add an audit trail feature.
