@@ -6,6 +6,7 @@
   --secondary: #6d15df;
   --tertiary: coral;
   --white: #fff;
+  --red: rgb(174, 18, 18);
 }
 h1,h2,h3 {
   margin: 0;
@@ -126,6 +127,48 @@ nav {
     background: #eee;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .open-in-new {
+    color: var(--primary);
+  }
+
+  .edit {
+    color: var(--secondary);
+  }
+
+  .delete {
+    color: var(--red);
+  }
+}
+
+// View Card
+.view-card{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.7rem;
+
+  h3 {
+    margin: 0.7rem 0;
+  }
+
+  span{
+    font-weight: normal;
+  }
+
+  .button {
+    margin: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-family: "Poppins";
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    text-decoration: none;
+    align-self: center;
   }
 }
 
