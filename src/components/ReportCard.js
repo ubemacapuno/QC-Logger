@@ -5,7 +5,7 @@ const ReportCard = ({ report, onDelete }) => {
 
     //Logic for Pass/Fail
     let qcResult = "Fail"
-    if(report.ph > 5 && report.ph < 7.5 && report.etoh <= 5 && report.acn <=0.4 && report.sterility === "Pass" && report.kryptofix === "Pass"){
+    if(report.ph > 5 && report.ph < 7.5 && report.etoh <= 5 && report.acn <=0.4 && report.sterility === "Pass" && report.kryptofix === "Pass" && report.endotoxin <= 0.5){
         qcResult = "Pass"
     }
 
