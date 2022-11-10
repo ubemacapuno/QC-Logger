@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import supabase from '../config/supabaseClient'
 
@@ -149,7 +149,8 @@ const Update = () => {
         </select>
 
      
-        <button>Update QC Report</button>
+        <button>Update</button>
+        <Link className="button" to="/">Back</Link>
 
         {formError && <p className="error">{formError}</p>}
       </form>

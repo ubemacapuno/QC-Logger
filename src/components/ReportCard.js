@@ -35,13 +35,13 @@ const ReportCard = ({ report, onDelete }) => {
             
             {/* Edit and Delete buttons: */}
             <div className="buttons">
-                <Link to={'/view/' + report.id}>
-                    <i className="material-icons open-in-new">open_in_new</i>
-                </Link>
                 <Link to={'/' + report.id}>
                     <i className="material-icons edit">edit</i>
                 </Link>
                 <i className="material-icons delete" onClick={handleDelete}>delete</i>
+                <Link to={'/view/' + report.id}>
+                    <i className="material-icons open-in-new">open_in_new</i>
+                </Link>
             </div>
         </div>
     )

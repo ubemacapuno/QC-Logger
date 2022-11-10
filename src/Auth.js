@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import supabase from './config/supabaseClient'
+import Footer from './components/Footer'
 
 export default function Auth() {
   const [loading, setLoading] = useState(false)
@@ -24,14 +25,15 @@ export default function Auth() {
     <div className="flex-wrapper">
       <div className="col-6 form-widget flex-container" aria-live="polite">
         <h1 className="description">
-          Sign in to QC Logger!
+          QC Logger
         </h1>
         <i className="material-icons logo logo-auth">biotech</i>
         {loading ? (
           'Sending magic link...'
         ) : (
         <form className="login-form" onSubmit={handleLogin}>
-          <label htmlFor="email">Your Email</label>
+          <h2 className="sign-in">Sign In</h2>
+          <label htmlFor="email">Enter your email</label>
           <input
             id="email"
             className="inputField"
@@ -47,6 +49,7 @@ export default function Auth() {
         
         )}
       </div>
+      <Footer />
     </div>
   )
 }
