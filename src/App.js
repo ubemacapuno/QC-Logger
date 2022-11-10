@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import Create from "./pages/Create"
 import Update from "./pages/Update"
 import ViewFDGCard from "./pages/ViewFDGCard"
+import Footer from './components/Footer'
 
 import Auth from './Auth'
 import Account from './Account'
@@ -29,8 +30,9 @@ export default function App() {
       {!session ? (
         <Auth />
       ) : (
-        <div>
+        <div className="app">
           <BrowserRouter>
+          <div className="content-wrap">
             <nav>
               <div className="flex-header">
                 <i className="material-icons logo">biotech</i>
@@ -46,7 +48,9 @@ export default function App() {
               <Route path="/:id" element={<Update />} />
               <Route path="/view/:id" element={<ViewFDGCard />} />
             </Routes>
+          </div>
           </BrowserRouter>
+          <Footer />
         </div>
         
       )}

@@ -71,7 +71,7 @@ const Account = ({ session }) => {
         'Saving ...'
       ) : (
         <p className="greeting">
-          <div>Hello, {session.user.email}!</div>
+          <div>Email: <span>{session.user.email}</span></div>
         </p>
       )}
       <button

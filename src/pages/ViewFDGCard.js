@@ -14,36 +14,6 @@ const ViewFDGCard = () => {
   const [acn, setacn] = useState('')
   const [sterility, setSterility] = useState('')
   const [kryptofix, setKryptofix] = useState('')
-  const [formError, setFormError] = useState('')
-
-  const handleSubmit = async (e) => {
-    e.preventDefault() //prevents reloading
-
-    //Prevent form submission if fields aren't populated
-    if(!batch || !date || !ph || !endotoxin || !etoh || !acn || !sterility || !kryptofix){
-      setFormError('Please fill in all the fields correctly')
-      return
-    }
-
-    const { data, error } = await supabase
-      .from('reports')
-      .update({ batch, date, ph, endotoxin, etoh, acn, sterility, kryptofix})
-      .eq('id',id)
-      .select()
-
-    if(error){
-      setFormError('Please fill in all the fields correctly')
-      console.log(error)
-    }
-
-    if(data){
-      setFormError(null)
-      console.log(data)
-      navigate('/')
-
-    }
-
-  }
 
   useEffect(() => {
     const fetchReport = async () => {
@@ -75,26 +45,28 @@ const ViewFDGCard = () => {
   }, [id, navigate])
 
   return (
-    <div className="view-card">
-      <h3>{batch}</h3>
+    <section class="view-card-wrapper">
+      <div className="view-card">
+        <h1>{batch}</h1>
 
-      <h3>End of Synthesis Date: <span>{date}</span></h3>
+        <h3>End of Synthesis Date: <span>{date}</span></h3>
 
-      <h3>pH: <span>{ph}</span></h3>
+        <h3>pH: <span>{ph}</span></h3>
 
-      <h3>Endotoxin: <span>{endotoxin}</span></h3>
-      
-      <h3>Ethanol: <span>{etoh}</span></h3>
+        <h3>Endotoxin: <span>{endotoxin}</span></h3>
+        
+        <h3>Ethanol: <span>{etoh}</span></h3>
 
-      <h3>Acetonitrile: <span>{acn}</span></h3>
+        <h3>Acetonitrile: <span>{acn}</span></h3>
 
-      <h3>Sterility: <span>{sterility}</span></h3>
+        <h3>Sterility: <span>{sterility}</span></h3>
 
-      <h3>Kryptofix: <span>{kryptofix}</span></h3>
+        <h3>Kryptofix: <span>{kryptofix}</span></h3>
 
-      <Link className="button" to="/">Go Back</Link>
-
-    </div>
+        <Link className="button" to="/">Back</Link>
+      </div>
+    </section>
+   
   )
 }
 

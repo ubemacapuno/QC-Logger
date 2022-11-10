@@ -6,7 +6,9 @@
   --secondary: #6d15df;
   --tertiary: coral;
   --white: #fff;
-  --red: rgb(174, 18, 18);
+  --red: rgb(220, 91, 91);
+  --green: limegreen;
+  --dark-gray: #333;
 }
 h1,h2,h3 {
   margin: 0;
@@ -14,10 +16,37 @@ h1,h2,h3 {
 
 body {
   margin: 0;
-  color: #333;
+  color: var(--dark-gray);
   font-family: 'Poppins';
   background: #f2f2f2;
 }
+
+
+//Utlility
+.button {
+  margin: 1rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: "Poppins";
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+}
+
+.block{
+  margin: 0;
+  background-color: var(--primary);
+  transition: 0.2s;
+}
+
+.block:hover {
+  background-color: var(--secondary);
+}
+
 nav {
   background: var(--primary);
   padding: 10px 20px;
@@ -42,7 +71,11 @@ nav {
 
 // auth elements
 .greeting {
-    color: black;
+  color: var(--secondary);
+  span{
+      color: var(--dark-gray);
+      font-weight: normal;
+    }
 }
 
 .signout {
@@ -71,9 +104,33 @@ nav {
   margin-bottom: 30px;
   margin-top: 10px;
 }
-.login-form{
-  margin: 0 10px;
+//Login form
+.flex-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .form-widget {
+    max-width: 500px;
+    width: 80%;
+
+    .login-form{
+      margin: 0 10px;
+      width: 95%;
+    
+      h2{
+        padding-bottom: 1.2rem;        
+      }
+  
+    }
+  }
 }
+
+
+
+
 .page {
   max-width: 1200px;
   margin: 20px auto;
@@ -143,34 +200,48 @@ nav {
 }
 
 // View Card
-.view-card{
+.view-card-wrapper{
   display: flex;
-  flex-direction: column;
-  padding: 0 0.7rem;
+  align-items: center;
+  justify-content: center;
 
-  h3 {
-    margin: 0.7rem 0;
+  .view-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0.7rem;
+    max-width: 90%;
+    padding: 1.5rem;
+
+    h1 {
+      margin: 0.7rem;
+      align-self: center;
+    }
+
+    h2 {
+      color: var(--primary);
+      padding-bottom: 1rem;
+      align-self: center;
+    }
+    
+  
+    h3 {
+      margin: 0.7rem 0;
+    }
+  
+    span{
+      font-weight: normal;
+      margin-left: 0.3rem;
+    }
+
+    .button {
+      align-self: flex-start;
+      margin: 0;
+    }
   }
 
-  span{
-    font-weight: normal;
-  }
-
-  .button {
-    margin: 1rem;
-    background-color: var(--primary);
-    color: var(--white);
-    border: 0;
-    border-radius: 6px;
-    padding: 6px 8px;
-    font-family: "Poppins";
-    cursor: pointer;
-    text-align: center;
-    width: 80px;
-    text-decoration: none;
-    align-self: center;
-  }
 }
+
 
 
 /* forms */
@@ -191,6 +262,7 @@ form {
     padding: 6px 8px;
     font-family: "Poppins";
     cursor: pointer;
+    font-size: 1rem;
   }
 
   input, textarea, select {
@@ -227,12 +299,6 @@ form {
   font-size: 70px;
   
 }
-.flex-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .order-by p{
   font-weight: bold;
@@ -253,16 +319,51 @@ form {
 }
 .Fail{
   color: #fff;
-  background: rgb(220, 91, 91);
+  background: var(--red);
 }
 .Pass{
-  background: limegreen;
+  background: var(--green);
 }
 .order-by-value {
   font-weight: bold;
   color: var(--secondary);
 
 }
+
+//App Styles for footer position
+.app{
+  position: relative;
+
+  .content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
+}
+
+.footer {
+
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .smoothie-grid {

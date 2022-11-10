@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Navigate, useNavigate } from "react-router-dom"
+import { Navigate, useNavigate, Link } from "react-router-dom"
 import supabase from "../config/supabaseClient"
 
 const Create = () => {
@@ -121,6 +121,7 @@ const Create = () => {
 
      
         <button>Submit Report</button>
+        <Link className="button" to="/">Back</Link>
 
         {formError && <p className="error">{formError}</p>}
       </form>
